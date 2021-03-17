@@ -69,6 +69,3 @@ fimalgoritmo
 verdadeiro
 
 
-
-
-

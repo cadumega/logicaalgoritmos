@@ -1,10 +1,8 @@
 Operadores Lógicos.
 
 
-
 && + -  é - , 
 || precisa de um verdadeiro pelo menos ,para ser verdadeiro
-
 
 
 
@@ -64,3 +62,206 @@ inicio
    idade <- ano_atual - ano_nasc
    Escreva("Minha idade será " , idade)
 fimalgoritmo
+
+
+algoritmo "viagem"
+var
+   reais, dolares: Real
+
+inicio
+   Escreva("Quantos Reais eu tenho? R$ ")
+   Leia(reais)
+   dolares <- reais/5.80
+   Escreva("Posso ter US$ ", dolares)
+fimalgoritmo
+
+
+
+algoritmo "viagemtemp"
+var
+   F, C: Real
+
+inicio
+   Escreva("Qual é a temperatura aqui nos EUA F°? ")
+   Leia(F)
+   C <- (F-32) /1.8
+   Escreva("No Brasil estaria em Celsius " ,C:4:1)
+
+fimalgoritmo
+
+inteiro media = 7
+
+se (media>=7) {
+	escreva(“Parabéns!! Você foi aprovado!!")
+}
+
+senao {
+	escreva(“Infelizmente você foi reprovado")
+}
+
+
+Condições estão presentes nossa vida o dia inteiro.
+Estrutura é delimitada, se acontecer determinada resposta.
+
+
+Se eu tiver dinheiro então vou fazer uma viagem para Disney.
+						ação
+
+Se ( expressão ) então
+bloco
+FimSe
+
+
+Se ( dinheiro >=1.000) então
+Escreva (“Partiu Disney”)
+FimSe
+
+
+Vou declarando as variáveis conforme vou criando minha lógica de programação.
+
+____
+algoritmo "semnome"
+
+var
+   ano, nasc, idade: Inteiro
+inicio
+  	Escreva("Em que ano estamos? " )
+  	Leia (ano)
+  	Escreva("Em que ano você nasceu? ")
+  	Leia (nasc)
+  	idade <- ano - nasc
+  	Escreva ("Em ", ano , " você tera ",idade , " anos,")
+  	Se (idade >=21) entao
+     		EscrevaL ("e  já terá atingido a maioridade.")
+fimalgoritmo
+
+
+___
+Se algo acontecer vou fazer isso,
+se não,  vou fazer outra coisa.
+___
+
+Se (expressão) então
+	Bloco A
+senao
+	Bloco B
+FimSe
+
+#palavras reservadas não podem ter til, acento.
+#Condicional composta ao adicionar o senao, código identado
+
+
+Saber se o número é par ou impar, basta verificar se o resto da divisão é zero ou 1.
+
+algoritmo "ParOuImpar"
+
+var
+   N: Inteiro
+inicio
+  	Escreva("Digite um número qualquer: " )
+  	Leia (N)
+  	Se (N % 2= 0) entao
+     	EscrevaL("O número", N, " é Par")
+  	senao
+     	EscrevaL("O número", N, "é Impar")
+  	FimSe
+fimalgoritmo
+
+Cálculo do IMC.     IMC= Massa / Altura ²
+
+Esta apto a dirigir?
+
+
+Aluno aprovado, reprovado ou em recuperação.
+algoritmo "Aluno"
+
+var
+   N1, N2,M: Real
+inicio
+  	Escreva("Primeira Nota: ")
+  	Leia(N1)
+  	Escreva("Segunda nota: ")
+  	Leia(N2)
+  	M <- ( N1 +N2 ) / 2
+  	EscrevaL("A média do aluno foi: ", M:4:2)
+  	Se(M >=7) entao
+     	EscrevaL("Aluno Aprovado")
+  	senao
+     	Se ( M >=5 ) e (M <7 ) entao
+        	EscrevaL ("Aluno em Recuperação")
+     	senao
+        	EscrevaL ("Aluno Reprovado")
+     	FimSe
+fimalgoritmo
+
+
+
+
+
+
+
+algoritmo "CriancaEsp"
+
+var
+   Valor, D: Inteiro
+inicio
+      EscrevaL ("---------------------")
+      EscrevaL (" CRIANCA ESPERANCA ")
+      EscrevaL ("---------------------")
+      EscrevaL ("Muito obrigado por ajudar")
+      EscrevaL ("[1] para doar R$ 10")
+      EscrevaL ("[2] para doar R$ 20")
+      EscrevaL ("[3] para doar R$ 30")
+      EscrevaL ("[4] para doar outros valores")
+      EscrevaL ("[5] para cancelar")
+      Leia (D)
+      Escolha D
+              Caso 1
+                   Valor <- 10
+              Caso 2
+                   Valor <- 20
+              Caso 3
+                   Valor <- 30
+              Caso 4
+                    Escreva ("Qual o valor da doação? R$ ")
+                    Leia (valor)
+              Caso 5
+                   Valor <- 0
+      FimEscolha
+      EscrevaL("---------------------")
+      EscrevaL("Sua Doação foi de R$ ", Valor)
+      EscrevaL("Muito Obrigado!")
+      EscrevaL("---------------------")
+fimalgoritmo
+
+Escolha usado para n° inteiros
+
+Testar vários valores, separando por vírugla.
+
+
+algoritmo "DependentesFuncionario"
+
+var
+   Nome: Caractere
+   Sal, NSal: Real
+   Dep: Inteiro
+inicio
+      EscrevaL ("Qual o nome do Funcionário? ")
+      Leia(Nome)
+      EscrevaL ("Qual o salário do Funcionário? R$ ")
+      Leia(Sal)
+      EscrevaL ("Qual é a quantidade de dependentes? ")
+      Leia(Dep)
+      Escolha Dep
+              Caso 0
+                   NSal <- Sal + (Sal*5/100)
+              Caso 1,2,3
+                   NSal <- Sal + (Sal*10/100)
+              Caso 4,5,6
+                   NSal <- Sal + (Sal*15/100)
+              OutroCaso
+                   NSal <- Sal + (Sal*18/100)
+      FimEscolha
+      EscrevaL("O Novo salário de ", Nome, " sera de R$ ", NSal:5:2)
+fimalgoritmo
+
